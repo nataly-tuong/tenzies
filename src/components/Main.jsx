@@ -52,10 +52,10 @@ export default function Main() {
         </p>
         <div className="grid grid-cols-5 mb-5 gap-5">{diceElements}</div>
         <button
-          className="h-12.5 w-25 rounded-sm shadow-[0px_2px_2px_rgba(0,0,0,0.15)] bg-[#5035FF] text-white text-[1.2rem] cursor-pointer"
+          className="h-12.5 mb-5 w-25 rounded-sm shadow-[0px_2px_2px_rgba(0,0,0,0.15)] bg-[#5035FF] text-white text-[1.2rem] cursor-pointer"
           onClick={rollDice}
         >
-          Roll
+          {gameWon ? "New Game" : "Roll"}
         </button>
       </div>
     </main>
