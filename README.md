@@ -14,4 +14,4 @@ what i learned
 
 built with
 
-react, vite
+react, tailwind, vite
