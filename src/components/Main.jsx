@@ -41,6 +41,11 @@ export default function Main() {
   return (
     <main className="bg-blue-950 justify-center items-center min-h-screen p-5 flex flex-col">
       <div className="bg-gray-50 rounded-md w-full max-w-100 justify-evenly flex-1 max-h-100 flex flex-col items-center">
+        <h1 className="text-3xl font-bold">Tenzies</h1>
+        <p className="px-6 text-center mb-6">
+          Roll until all dice are the same. Click each die to freeze it at its
+          current value between rolls.
+        </p>
         <div className="grid grid-cols-5 gap-5">{diceElements}</div>
         <button
           className="h-12.5 w-25 rounded-sm shadow-[0px_2px_2px_rgba(0,0,0,0.15)] bg-[#5035FF] text-white text-[1.2rem] cursor-pointer"
