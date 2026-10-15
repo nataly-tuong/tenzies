@@ -1,6 +1,7 @@
 import Die from "./Die";
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import Confetti from "react-confetti";
 
 export default function Main() {
   const [dice, setDice] = useState(generateAllNewDice());
@@ -44,6 +45,7 @@ export default function Main() {
 
   return (
     <main className="bg-blue-950 justify-center items-center min-h-screen p-5 flex flex-col">
+      {gameWon && <Confetti />}
       <div className="bg-gray-50 pt-5 rounded-md w-full max-w-100 justify-evenly flex-1 max-h-100 flex flex-col items-center">
         <h1 className="text-3xl font-bold">Tenzies</h1>
         <p className="px-6 text-center mb-6">
