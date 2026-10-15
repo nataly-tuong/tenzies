@@ -18,11 +18,11 @@ export default function Main() {
   }
 
   function hold(id) {
-    setDice((oldDice) => {
-      return oldDice.map((die) => {
-        return die.id === id ? { ...die, isHeld: !die.isHeld } : die;
-      });
-    });
+    setDice((oldDice) =>
+      oldDice.map((die) =>
+        die.id === id ? { ...die, isHeld: !die.isHeld } : die,
+      ),
+    );
   }
 
   const diceElements = dice.map((dieObj) => (
