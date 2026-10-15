@@ -17,8 +17,21 @@ export default function Main() {
     setDice(generateAllNewDice());
   }
 
+  function hold(id) {
+    setDice((oldDice) => {
+      return oldDice.map((die) => {
+        return die.id === id ? { ...die, isHeld: !die.isHeld } : die;
+      });
+    });
+  }
+
   const diceElements = dice.map((dieObj) => (
-    <Die key={dieObj.id} value={dieObj.value} />
+    <Die
+      hold={() => hold(dieObj.id)}
+      key={dieObj.id}
+      isHeld={dieObj.isHeld}
+      value={dieObj.value}
+    />
   ));
 
   return (
